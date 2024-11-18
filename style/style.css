@@ -1,0 +1,19 @@
+header,
+#service,
+#Appoinment {
+  background: rgb(209, 231, 253);
+  background: linear-gradient(
+    122deg,
+    rgba(209, 231, 253, 1) 0%,
+    rgba(251, 235, 225, 0.895) 35%,
+    rgba(209, 231, 253, 1) 100%
+  );
+}
+
+#whyMe {
+  background-image: url('/assets/mask-doctor.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

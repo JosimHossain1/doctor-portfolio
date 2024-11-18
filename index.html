@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design & Responsive with Tailwind CSS</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="style/style.css">
+
+</head>
+
+<body>
+
+
+  <!-- Start Here-->
+  <header class="h-full px-6 md:px-16">
+    <!-- Navabr -->
+    <nav class="flex justify-between items-center py-3 ">
+      <div class="logo flex items-center space-x-1">
+        <img src="assets/logo.svg" alt="Logo">
+        <img src="/assets/burger-bar.png" class="w-7 h-7 cursor-pointer md:hidden" alt="" id="open">
+
+      </div>
+
+      <div class="menu bg-white px-2 py-1 rounded hidden md:block">
+        <ul class="flex space-x-4">
+          <li
+            class="text-lg font-semibold hover:bg-blue-400 cursor-pointer hover rounded-md px-2 py-1 hover:text-white">
+            Home</li>
+          <li
+            class="text-lg font-semibold hover:bg-blue-400 cursor-pointer hover rounded-md px-2 py-1 hover:text-white">
+            Services</li>
+          <li
+            class="text-lg font-semibold hover:bg-blue-400 cursor-pointer hover rounded-md px-2 py-1 hover:text-white">
+            About</li>
+          <li
+            class="text-lg font-semibold hover:bg-blue-400 cursor-pointer hover rounded-md px-2 py-1 hover:text-white">
+            Package</li>
+          <li
+            class="text-lg font-semibold hover:bg-blue-400 cursor-pointer hover rounded-md px-2 py-1 hover:text-white">
+            Contact</li>
+        </ul>
+      </div>
+
+      <div class="contact flex space-x-4 items-center">
+        <img src="assets/bedoctor-header-icon1.svg" class="w-4" alt="">
+        <p class="hidden md:block">+61 (0) 3 8376 6284</p>
+        <img src="assets/bedoctor-header-icon2.svg" class="w-9" alt="">
+      </div>
+
+
+
+      <!--  -->
+      <div class="menu bg-white px-2 py-1 rounded hidden w-[70%] absolute top-0 left-0 h-screen" id="mobile-menu">
+
+        <img src="/assets/close.png" class="w-4 cursor-pointer right-5 top-2 absolute" alt="" id="close">
+
+
+        <ul class=" mt-10">
+          <li
+            class="text-lg font-semibold hover:bg-blue-400 cursor-pointer hover rounded-md px-2 py-1 hover:text-white">
+            Home</li>
+          <li
+            class="text-lg font-semibold hover:bg-blue-400 cursor-pointer hover rounded-md px-2 py-1 hover:text-white">
+            Services</li>
+          <li
+            class="text-lg font-semibold hover:bg-blue-400 cursor-pointer hover rounded-md px-2 py-1 hover:text-white">
+            About</li>
+          <li
+            class="text-lg font-semibold hover:bg-blue-400 cursor-pointer hover rounded-md px-2 py-1 hover:text-white">
+            Package</li>
+          <li
+            class="text-lg font-semibold hover:bg-blue-400 cursor-pointer hover rounded-md px-2 py-1 hover:text-white">
+            Contact</li>
+        </ul>
+      </div>
+
+    </nav>
+
+    <!-- Hero Area -->
+    <div class="hero-area md:flex justify-between items-center pt-5">
+
+      <!-- Text side -->
+      <div class="md:w-[50%]">
+        <p class="text-[#3F7AF6] text-lg">BEDOCTOR</p>
+        <h1 class="text-[30px] md:text-[50px] font-bold leading-none text-[#204289]">
+
+          Hi, I'm <span class="text-[#3F7AF6]">Kim Granger</span> and I'll be your family doctor!</h1>
+
+        <div class="mt-5 md:space-x-4">
+          <button class="border text-lg bg-blue-800 text-white py-2 px-6 rounded-full">Book Appoinment</button>
+          <button class="border border-blue-900 text-lg text-blue-900 py-2 px-6 rounded-full">My Experience</button>
+        </div>
+      </div>
+
+      <!-- Image side -->
+      <div class="md:w-[50%]">
+        <img src="assets/p1.webp" class="w-[350px] md:w-[450px] h-[450px] md:h-[550px] object-cover mx-auto"
+          alt="Hero Doctor">
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Main Section -->
+
+  <main>
+    <!-- About Section -->
+    <section class="px-6 md:px-16 bg-blue-50 md:flex justify-between items-center py-20">
+      <!-- Image Side -->
+      <div class="md:w-1/2">
+        <img src="assets/p2.webp" class="w-1/2 mx-auto" alt="">
+      </div>
+      <!-- Text Side -->
+      <div class="md:w-1/2">
+        <img src="assets/icon1.svg" alt="">
+        <p class="text-blue-900 font-bold my-5">Vulputate fringilla in gravida hendrerit quis sed ultrices. Risus in
+          vestibulum turpis
+          velit. Varius id
+          consequat consectetur odio elementum elit enim elit. Eget donec vitae bibendum pulvinar. Suscipit massa
+          fermentum.</p>
+        <p class="text-blue-500">-------- Kim Granger
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+
+    <section id="service" class="px-6 md:px-16 py-10">
+      <!-- Title -->
+      <div class="md:w-1/2 mx-auto text-center">
+        <h6 class="text-blue-600">OUR SERVICES</h6>
+        <h1 class="text-4xl font-bold my-2 text-blue-900">Our specializations</h1>
+        <p class="md:mx-20 text-blue-700">Posuere at arcu, felis iaculis tortor mattis id. Eu at in posuere elit.
+          Feugiat
+          at faucibus
+          risus commodo
+          odio.
+        </p>
+      </div>
+
+
+      <!-- Services Card -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+        <!-- Card 1 -->
+        <div class="rounded-lg overflow-hidden bg-white text-center">
+          <img src="/assets/p3.webp" alt="">
+          <div class="py-5 px-3">
+            <h1 class="text-4xl font-semibold text-blue-900">Dental Department</h1>
+            <p class="text-blue-600">Sodales habitasse aliquam solli primis.</p>
+            <button class="border border-blue-900 text-md text-blue-900 py-1 px-6 mt-2 rounded-full">See More</button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="rounded-lg overflow-hidden bg-white text-center">
+          <img src="/assets/p4.webp" alt="">
+          <div class="py-5 px-3">
+            <h1 class="text-4xl font-semibold text-blue-900">Dental Department</h1>
+            <p class="text-blue-600">Sodales habitasse aliquam solli primis.</p>
+            <button class="border border-blue-900 text-md text-blue-900 py-1 px-6 mt-2 rounded-full">See More</button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="rounded-lg overflow-hidden bg-white text-center">
+          <img src="/assets/p5.webp" alt="">
+          <div class="py-5 px-3">
+            <h1 class="text-4xl font-semibold text-blue-900">Dental Department</h1>
+            <p class="text-blue-600">Sodales habitasse aliquam solli primis.</p>
+            <button class="border border-blue-900 text-md text-blue-900 py-1 px-6 mt-2 rounded-full">See More</button>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="rounded-lg overflow-hidden bg-white text-center">
+          <img src="/assets/p6.webp" alt="">
+          <div class="py-5 px-3">
+            <h1 class="text-4xl font-semibold text-blue-900">Dental Department</h1>
+            <p class="text-blue-600">Sodales habitasse aliquam solli primis.</p>
+            <button class="border border-blue-900 text-md text-blue-900 py-1 px-6 mt-2 rounded-full">See More</button>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="rounded-lg overflow-hidden bg-white text-center">
+          <img src="/assets/p7.webp" alt="">
+          <div class="py-5 px-3">
+            <h1 class="text-4xl font-semibold text-blue-900">Dental Department</h1>
+            <p class="text-blue-600">Sodales habitasse aliquam solli primis.</p>
+            <button class="border border-blue-900 text-md text-blue-900 py-1 px-6 mt-2 rounded-full">See More</button>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="rounded-lg overflow-hidden bg-white text-center">
+          <img src="/assets/p8.webp" alt="">
+          <div class="py-5 px-3">
+            <h1 class="text-4xl font-semibold text-blue-900">Dental Department</h1>
+            <p class="text-blue-600">Sodales habitasse aliquam solli primis.</p>
+            <button class="border border-blue-900 text-md text-blue-900 py-1 px-6 mt-2 rounded-full">See More</button>
+          </div>
+        </div>
+
+
+      </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Me -->
+
+    <section id="whyMe" class="px-6 md:px-16 py-10 text-white">
+      <div class="md:w-2/3">
+        <h1 class="text-4xl md:text-[60px] mt-2">Why you should choose me?</h1>
+        <button class="border text-lg bg-blue-800 text-white py-2 px-6 rounded-full mt-5">Book Appoinment</button>
+      </div>
+      <!-- Numbering -->
+      <div class="grid md:grid-cols-3 gap-5 mt-10">
+        <div>
+          <span class="bg-blue-600 w-10 h-7 block overflow-hidden">
+            <h1 class="text-4xl">01</h1>
+          </span>
+          <p>Posuere viverra felis cursus porta. Lacus, egestas elit sed faucibus id nisl scelerisque.</p>
+        </div>
+        <div>
+          <span class="bg-blue-600 w-10 h-7 block overflow-hidden ">
+            <h1 class="text-4xl">02</h1>
+          </span>
+          <p>Posuere viverra felis cursus porta. Lacus, egestas elit sed faucibus id nisl scelerisque.</p>
+        </div>
+        <div>
+          <span class="bg-blue-600 w-10 h-7 block overflow-hidden">
+            <h1 class="text-4xl">03</h1>
+          </span>
+          <p>Posuere viverra felis cursus porta. Lacus, egestas elit sed faucibus id nisl scelerisque.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Appointment -->
+
+    <section class="px-6 md:px-16 py-10 md:flex   items-center gap-5">
+
+      <!-- Image Side -->
+
+      <div class="md:w-1/2">
+        <img src="/assets/p9.webp" alt="" class="rounded-lg w-full md:h-[600px] object-cover">
+      </div>
+
+      <!-- Text Side -->
+
+      <div id="Appoinment"
+        class="rounded-lg text-center py-16 flex justify-center items-center flex-col md:w-1/2 md:h-[600px] px-20 mt-5 md:mt-0">
+        <span class="w-14 h-14 bg-white block flex justify-center items-center rounded-full mx-auto mb-3">
+          <img src="/assets/bedoctor-icon-pin.svg" alt="" class="w-6">
+
+        </span>
+        <h3 class="text-4xl font-semibold text-blue-900 mb-3">Visit our new facility. We're looking forward to seeing
+          you!
+        </h3>
+
+        <p class="text-blue-700 mx-16 my-5">Level 13, 2 Elizabeth St, Melbourne, Victoria 3000, Australia</p>
+
+        <button class="border text-lg bg-blue-800 text-white py-2 px-6 rounded-full">Book Appoinment</button>
+      </div>
+
+    </section>
+
+
+    <!-- Pricing -->
+
+    <section id="pricing" class="px-6 md:p-24 bg-[#F2F6FA] md:mx-16 md:rounded-lg">
+      <!-- Title -->
+      <div class="md:w-1/2 mx-auto text-center">
+        <h6 class="text-blue-600">PRICING </h6>
+        <h1 class="text-4xl font-bold my-2 text-blue-900">Choose your health plan
+        </h1>
+        <p class="md:mx-20 text-blue-700">Posuere at arcu, felis iaculis tortor mattis id. Eu at in posuere elit.
+          Feugiat
+          at faucibus
+          risus commodo
+          odio.
+        </p>
+      </div>
+
+
+      <!-- Pricing Card -->
+
+      <div class="grid md:grid-cols-3 gap-5 my-14 ">
+        <!-- Card 1 -->
+        <div class="card1 bg-white p-5 rounded-lg text-center">
+          <img src="/assets/bedoctor-pricing-icon1.svg" class="mx-auto" alt="">
+          <p class="text-blue-700 text-xl font-semibold my-2">Basic</p>
+          <p class="text-blue-700">$ <sub class="text-blue-900 text-5xl font-semibold">39</sub> mo</p>
+
+          <div class="my-5">
+            <p class="text-blue-500 mb-2">Consultation with doctor
+            </p>
+            <hr>
+            <p class="text-blue-500 my-2">Laboratory and diagnostic tests
+            </p>
+            <hr>
+            <p class="text-blue-500 mt-2">Two home visits a year
+            </p>
+          </div>
+
+          <button class="border text-lg bg-blue-800 text-white py-2 px-6 rounded-full">Choose</button>
+
+        </div>
+        <!-- Card 2 -->
+        <div class="card2 bg-white p-5 rounded-lg text-center">
+          <img src="/assets/bedoctor-pricing-icon1.svg" class="mx-auto" alt="">
+          <p class="text-blue-700 text-xl font-semibold my-2">Basic</p>
+          <p class="text-blue-700">$ <sub class="text-blue-900 text-5xl font-semibold">39</sub> mo</p>
+
+          <div class="my-5">
+            <p class="text-blue-500 mb-2">Consultation with doctor
+            </p>
+            <hr>
+            <p class="text-blue-500 my-2">Laboratory and diagnostic tests
+            </p>
+            <hr>
+            <p class="text-blue-500 mt-2">Two home visits a year
+            </p>
+          </div>
+
+          <button class="border text-lg bg-blue-800 text-white py-2 px-6 rounded-full">Choose</button>
+
+        </div>
+        <!-- Card 3 -->
+        <div class="card3 bg-blue-800 text-white p-5 rounded-lg text-center">
+          <img src="/assets/bedoctor-pricing-icon3.svg" class="mx-auto" alt="">
+          <p class="text-xl font-semibold my-2">Basic</p>
+          <p>$ <sub class="text-5xl font-semibold">39</sub> mo</p>
+
+          <div class="my-5">
+            <p class="mb-2">Consultation with doctor
+            </p>
+            <hr>
+            <p class="my-2">Laboratory and diagnostic tests
+            </p>
+            <hr>
+            <p class="mt-2">Two home visits a year
+            </p>
+          </div>
+
+          <button class="border text-lg bg-blue-800 text-white py-2 px-6 rounded-full">Choose</button>
+
+        </div>
+
+
+      </div>
+    </section>
+
+
+    <!-- Satisfied patients -->
+    <section id="Satisfied" class="m-16">
+      <div class="wrapper grid md:grid-cols-2 items-center gap-10">
+        <!-- Text Side -->
+        <div class="text-side">
+          <h1 class="border-2 border-blue-700 w-fit text-5xl text-blue-700 px-2 rounded-lg">98%</h1>
+          <h1 class="text-4xl md:text-5xl my-4 font-semibold text-blue-800">Satisfied patients
+          </h1>
+          <p class="text-blue-900 mb-4">Ac amet in adipiscing in sed sit eget. Aliquam suspendisse viverra varius
+            lobortis
+            elit velit. Sit vitae a
+            enim mi vitae accumsan. Quam in auctor sed libero lacus. Varius adipiscing ac, commodo, tincidunt.
+          </p>
+
+          <p class="text-blue-900">Kristin Watson</p>
+          <p class="text-blue-900">Jun 27, 2020</p>
+        </div>
+
+        <!-- Image Side -->
+        <div>
+
+          <div class="relative">
+            <img src="/assets/bedoctor-packages-pic2.webp" alt="" class="">
+
+
+            <div
+              class="bg-white rounded-xl flex space-x-4 px-5 w-fit right-5 bottom-10 md:bottom-20 md:py-10 py-2 absolute">
+              <img src="/assets/bedoctor-header-icon2.svg" alt="">
+              <div>
+                <h4 class=" text-2xl md:text-4xl font-semibold">4.9</h4>
+                <p class="">Opinions made <br> by our patients</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Appointment -->
+
+    <section class="m-6 md:m-24 text-center text-white bg-blue-800 rounded-xl p-10">
+      <img src="/assets/bedoctor-icon4.svg" class="mx-auto" alt="">
+      <h1 class="text-4xl md:text-5xl font-semibold my-4"> Don't wait and make <br> an appointment today</h1>
+      <button class="border text-lg bg-white text-blue-600 py-2 px-6 rounded-full mt-5 font-semibold">Book
+        Appoinment</button>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="m-6 md:m-24">
+    <img src="/assets/bedoctor-footer-logo.svg" class="mx-auto" alt="">
+
+    <div class="grid md:grid-cols-7 gap-10 mt-10">
+      <!-- Part 1 -->
+      <div class="md:col-span-2">
+        <address class="text-blue-700">
+          Level 13, 2 Elizabeth St, Melbourne, Victoria 3000, Australia
+          Opening hours: Mon - Sat: 9 AM - 6 PM
+        </address>
+      </div>
+
+      <!-- Part 2 -->
+      <div class="md:col-span-3 text-center">
+        <p class="font-semibold text-blue-600">Contact Me</p>
+        <h1 class="text-4xl md:text-5xl font-semibold"> +61 (0) 3 8376 6284</h1>
+        <button class="border text-lg text-white bg-blue-600 py-2 px-6 rounded-full mt-5 font-semibold">Contact
+          us</button>
+      </div>
+
+      <!-- Part 3 -->
+
+      <ul class="md:col-span-2 text-center">
+        <h6 class="text-blue-700 font-semibold text-lg">Useful Links</h6>
+        <li class="text-blue-600 cursor-pointer"> <a href="#"> Contact with us </a></li>
+        <li class="text-blue-600 cursor-pointer"> <a href="#"> Who we are? </a></li>
+        <li class="text-blue-600 cursor-pointer"> <a href="#"> Safety data sheets </a></li>
+        <li class="text-blue-600 cursor-pointer"> <a href="#"> Job Application </a></li>
+        <li class="text-blue-600 cursor-pointer"> <a href="#"> Privecy Policy </a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <hr>
+  <!-- Bottom Footer -->
+  <footer class="text-center py-5">
+    <p class="font-semibold text-blue-700 text-sm">&copy;2024 develop by josim | All right reserved</p>
+  </footer>
+
+
+
+  <!-- JS -->
+
+  <script src="/index.js"></script>
+</body>
+
+</html>
